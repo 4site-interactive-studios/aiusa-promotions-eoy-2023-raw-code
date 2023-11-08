@@ -11,9 +11,7 @@ function checkForAdblocker() {
     const testAdWidth = testAd.offsetWidth;
     if (testAdWidth == "1") {
       console.log("########################################");
-      console.log(
-        "No adblocker detected, will run a Giving Tuesday Multivariate Promotion"
-      );
+      console.log("No adblocker detected, will run a Multivariate Promotion");
       triggerPromotions();
     } else if (testAdWidth == "0") {
       console.log("########################################");
@@ -31,13 +29,13 @@ function checkForAdblocker() {
 
 function triggerPromotions() {
   // Define the promotions to pick from
-  const gtPromotions = ["multistep", "spinner"];
+  const promotions = ["control", "test"];
 
   // Randomly pick and run one promotion
-  if (gtPromotions) {
+  if (promotions) {
     const myPromotion =
-      gtPromotions[Math.floor(Math.random() * gtPromotions.length)];
-    if (myPromotion == "multistep") {
+      promotions[Math.floor(Math.random() * promotions.length)];
+    if (myPromotion == "control") {
       console.log(
         "Triggering Promotion #92920: 2023 EOY 1 of 2 – OTG_CONTROL - W2310WDEVR1LBA"
       );
@@ -48,7 +46,7 @@ function triggerPromotions() {
         promotionName:
           "Promotion #92920: 2023 EOY 1 of 2 – OTG_CONTROL - W2310WDEVR1LBA",
       });
-    } else if (myPromotion == "spinner") {
+    } else if (myPromotion == "test") {
       console.log(
         "Triggering Promotion #92921: 2023 EOY 2 of 2 – MONTHLY_DEFAULT - W2310WDEVR1LBB"
       );
