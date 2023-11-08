@@ -12,7 +12,7 @@ function checkForAdblocker() {
     if (testAdWidth == "1") {
       console.log("########################################");
       console.log("No adblocker detected, will run a Multivariate Promotion");
-      triggerPromotions();
+      runMultivariateTest();
     } else if (testAdWidth == "0") {
       console.log("########################################");
       console.log(
@@ -27,7 +27,7 @@ function checkForAdblocker() {
   }
 }
 
-function triggerPromotions() {
+function runMultivariateTest() {
   // Define the promotions to pick from
   const promotions = ["control", "test"];
 
