@@ -51,6 +51,11 @@ function triggerPromotions() {
         "Triggering Promotion #92921: 2023 EOY 2 of 2 – MONTHLY_DEFAULT - W2310WDEVR1LBB"
       );
       window.triggerPromotion(92921);
+      window.dataLayer.push({
+        event: "promotion_seen",
+        promotionName:
+          "Promotion #92921: 2023 EOY 2 of 2 – MONTHLY_DEFAULT - W2310WDEVR1LBB",
+      });
     } else {
       console.log(
         "The promotion chosen is outside the array and nothing was triggered"
